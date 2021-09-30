@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+---
+#spring配置
+spring:
+ profiles: dev
+ application:
+    name: springcloud-provider-dept
+
+
+
+#Eureka配置
+eureka:
+  client:
+    service-url:  #监控页面
+      defaultZone: http://localhost:7001/eureka/  #发布位置， 可以设置集群 ，所有直接把所有集群 都加上去
+---
+
+#spring配置
+spring:
+ profiles: test
+ application:
+    name: springcloud-provider-dept
+
+
+
+#Eureka配置
+eureka:
+  client:
+    service-url:  #监控页面
+      defaultZone: http://localhost:7001/eureka/  #发布位置， 可以设置集群 ，所有直接把所有集群 都加上去
